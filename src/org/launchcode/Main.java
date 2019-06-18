@@ -17,7 +17,8 @@ public class Main {
         // TODO - Use different comparators here
         AreaComparator comparator = new AreaComparator();
         //NameComparator comparator = new NameComparator();
-
+        //StateComparator comparator = new StateComparator();
+        //PopulationComparator comparator = new PopulationComparator();
         cities.sort(comparator);
         printCities(cities);
 
