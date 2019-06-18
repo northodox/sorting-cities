@@ -9,7 +9,7 @@ public class PopulationComparator implements Comparator<City> {
 
     @Override
     public int compare(City a, City b) {
-        return a.getPopulation() - (b.getPopulation());
+        return b.getPopulation() - (a.getPopulation());
     }
 }
 

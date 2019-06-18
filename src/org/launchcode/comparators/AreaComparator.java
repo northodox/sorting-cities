@@ -8,6 +8,6 @@ public class AreaComparator implements Comparator<City> {
 
     @Override
     public int compare(City a, City b) {
-        return Double.compare(a.getArea(), b.getArea());
+        return Double.compare(b.getArea(), a.getArea());
     }
 }
