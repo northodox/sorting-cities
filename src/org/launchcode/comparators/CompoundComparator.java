@@ -9,26 +9,24 @@ import java.util.List;
 
 public class CompoundComparator implements Comparator<City> {
 
-    private List<Comparator<City>> comparators = new ArrayList<>();
+    public List<Comparator<City>> comparators = new ArrayList<>();
 
-    public String add(Comparator<City> x) {
-        comparators.add(x);
-        return x.toString();
+    public void add(Comparator<City> comparator) {
+        this.comparators.add(comparator);
     }
 
     @Override
     public int compare(City a, City b) {
-        if(comparators.size() <= 1) {
-            System.out.println("You need at least two comparators!");
-        }
-        else {
-            for (int i = 0; i < comparators.size(); i++) {
-                while (comparators.get(i).compare(a, b) != 0) {
-                    return comparators.get(i).compare(a, b);
-                }
+        int comparison = 0;
+        int index = 0;
+
+        while (comparison == 0) {
+            comparison = this.comparators.get(index).compare(a, b);
+            index++;
+            if(index > comparators.size());{
+                return 0;
             }
-            //return compare(a, b);
         }
-        return compare(a,b);
+        return comparison;
     }
 }

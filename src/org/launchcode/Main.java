@@ -17,10 +17,11 @@ public class Main {
         //AreaComparator comparator = new AreaComparator();
         //NameComparator comparator = new NameComparator();
         //StateComparator comparator = new StateComparator();
-        PopulationComparator comparator = new PopulationComparator();
-        /*CompoundComparator comparator = new CompoundComparator();
+        //PopulationComparator comparator = new PopulationComparator();
+        CompoundComparator comparator = new CompoundComparator();
         comparator.add(new StateComparator());
-        comparator.add(new AreaComparator());*/
+        comparator.add(new AreaComparator());
+        comparator.add(new NameComparator());
         cities.sort(comparator);
         printCities(cities);
 
